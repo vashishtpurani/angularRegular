@@ -1,9 +1,13 @@
 .main-container{
   display: flex;
   height: 100%;
-  background-color: #B8E4F0;
   font-size: 15px;
 }
 app-sidebar{
+  height: auto;
+}
+app-chat-area{
+  display: flex;
+  height: 100%;
 
 }
