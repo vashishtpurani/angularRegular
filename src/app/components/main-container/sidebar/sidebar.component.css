@@ -1,0 +1,60 @@
+.sidebar {
+  height: 100%;
+  flex: .35;
+  border-right:solid 1px;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar_header{
+  padding: 8px;
+  max-height: 50px;
+  background-color: red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar_header_icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: yellow;
+  margin-right: 10px;
+  width: 5vw;
+}
+button mat-icon{
+  margin-right: 10vw;
+  font-size: 25px;
+
+}
+.sidebar_searchbar{
+  background-color: green;
+  border-bottom: solid 1px;
+  padding: 15px;
+  display: flex;
+  position: relative;
+}
+.sidebar_searchbar_content{
+  width: fit-content;
+  position: relative;
+}
+.sidebar_searchbar_content_icon{
+  position: absolute;
+  top:-5%;
+  left: 8px;
+  color: black;
+  font-size: 15px;
+}
+.sidebar_search_content_input{
+  padding: 8px 20px 8px 30px;
+  border:1px solid;
+  outline: none;
+  border-radius: 15px;
+}
+.sidebar_search_content_input::placeholder{
+  padding-left: 30px;
+  font-size: small;
+}
+.sidebar_content{
+  overflow-y: scroll;
+  flex: 1;
+}

@@ -12,6 +12,10 @@ import { DefaultPageComponent } from './components/main-container/chat-area/defa
 import { RoomChatComponent } from './components/main-container/chat-area/room-chat/room-chat.component';
 import {MaterialModule} from "./shared/material.module";
 import { LoginComponent } from './components/login/login.component';
+import {MatMenuModule} from "@angular/material/menu";
+import {MatButtonModule} from "@angular/material/button";
+import {FormsModule} from "@angular/forms";
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -28,7 +32,11 @@ import { LoginComponent } from './components/login/login.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    MatMenuModule,
+    MatButtonModule,
+    FormsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

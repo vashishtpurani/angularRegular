@@ -1,19 +1,52 @@
 <section class="sidebar">
 
   <div class="sidebar_header">
-    <img src="" alt="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmLR2ktNf_jXJs2Mrz8ke5qOZJZj21rrf4ZA&usqp=CAU"
+         alt="rinn"
+         matCardAvatar>
     <div class="sidebar_header_icons">
-
+      <button mat-icon-button>
+        <mat-icon>sentiment_satisfied_alt</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>sentiment_satisfied_alt</mat-icon>
+      </button>
+      <button mat-icon-button [mat-menu-trigger-for]="menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>logout</button>
+        <button mat-menu-item>settings</button>
+      </mat-menu>
     </div>
 
   </div>
 
-  <div class="sidebar_searchbar">
 
+
+
+
+
+  <div class="sidebar_searchbar">
+  <div class="sidebar_searchbar_content">
+    <form #form="ngForm"(ngSubmit)="onFormSubmit(form)">
+      <button mat-icon-button class="sidebar_searchbar_content_icon">
+        <mat-icon>search</mat-icon>
+      </button>
+      <input type="text"
+             class="sidebar_search_content_input"
+             name="search"
+             ngModel
+             placeholder="search chat here">
+      <button type="submit" style="display: none"></button>
+    </form>
+  </div>
   </div>
 
   <div class="sidebar_content">
-
+    <ng-container>
+      <app-sidebar-content></app-sidebar-content>
+    </ng-container>
   </div>
 
 </section>
